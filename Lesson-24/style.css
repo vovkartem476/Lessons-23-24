@@ -1,0 +1,185 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style-type: none;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .map {
+    width: 100%;
+    height: 100vh;
+    background-image: url(./images/Kids-Cartoon-World-Map-Wall.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: relative;
+  }
+
+  @keyframes open_left {
+    0%,
+    50% {
+      left: 0;
+    }
+    50%,
+    100% {
+      left: -490px;
+    }
+  }
+  
+  @keyframes open_right {
+    0%,
+    50% {
+      right: 0;
+    }
+    50%,
+    100% {
+      right: -490px;
+    }
+  }
+  
+  .pointers_item {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-radius: 50% 50% 50% 0;
+    transform: rotate(-45deg);
+    background-color: rgba(80, 120, 135, 0.5);
+    border: 2px solid #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .pointers p {
+    transform: rotate(45deg);
+    text-align: center;
+    color: #ffffcd;
+  }
+  
+  .link1 {
+    left: 620px;
+    top: 220px;
+  }
+  
+  .link2 {
+    left: 780px;
+    top: 250px;
+  }
+  
+  .link3 {
+    left: 310px;
+    top: 240px;
+  }
+
+  .link4 {
+    left: 390px;
+    top: 440px;
+  }
+
+  .link5 {
+    left: 590px;
+    top: 420px;
+  }
+
+  .link6 {
+    left: 880px;
+    top: 460px;
+  }
+
+  .link7 {
+    left: 610px;
+    top: 580px;
+  }
+  
+  .about li {
+    position: fixed;
+    width: 550px;
+    height: 550px;
+    border-radius: 50%;
+    background-color: rgba(102, 253, 208, 0.8);
+    color: #49402d;
+    font-size: 20px;
+    box-shadow: 4px 4px 10px 2px #000;
+    left: 50%;
+    bottom: 50%;
+    bottom: -150px;
+    transform: translate(-50%, 50%) scale(0.2);
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+  }
+  
+  .about a {
+    padding: 10px 15px;
+    border-radius: 12px;
+    background-color: #000;
+    color: #00ffea;
+    font-size: 18px;
+    height: fit-content;
+    align-self: flex-start;
+  }
+  
+  .about p {
+    padding: 10px 5px 10px 70px;
+    text-align: center;
+    flex-grow: 1;
+  }
+  
+  #link1_about:target,
+  #link2_about:target,
+  #link3_about:target,
+  #link4_about:target,
+  #link5_about:target,
+  #link6_about:target,
+  #link7_about:target {
+    opacity: 1;
+    bottom: 50%;
+    transform: translate(-50%, 50%) scale(1);
+  }
+  
+  #link1_about,
+  #link2_about,
+  #link3_about,
+  #link4_about,
+  #link5_about,
+  #link6_about,
+  #link7_about {
+    background-image: url(./images/planet.png);
+    background-size: cover;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  #link1_about p,
+  #link2_about p,
+  #link3_about p,
+  #link4_about p,
+  #link5_about p,
+  #link6_about p,
+  #link7_about p {
+    opacity: 0;
+    color: #000;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  #link1_about:hover p,
+  #link2_about:hover p,
+  #link3_about:hover p,
+  #link4_about:hover p,
+  #link5_about:hover p,
+  #link6_about:hover p,
+  #link7_about:hover p {
+    opacity: 1;
+    color: white;
+    text-shadow: 2px 2px 1px #000, -2px -2px 1px #000;
+    font-size: 30px;
+  }
+  
